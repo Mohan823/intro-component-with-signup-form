@@ -1,0 +1,180 @@
+// Partials
+@import "partials/partials";
+// Font
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    background: no-repeat center/contain url(images/bg-intro-desktop.png);
+    background-color: $clr-primary-red;
+    color: #fff;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    align-items: center;
+    min-height: 100vh;
+    margin-inline: 10rem;
+    max-width: 90rem;
+}
+
+.intro {
+    margin-right: 2rem;
+}
+
+.form-container {
+    min-width: 20rem;
+
+    // Paragraph container
+    >p {
+        font-size: 0.875rem;
+        color: hsl(246, 25%, 90%);
+        background-color: $clr-accent-Blue;
+        padding: 1rem 1rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.3rem 0 0 rgba(51, 51, 51, 0.3);
+
+        strong {
+            color: #fff;
+            font-weight: 600;
+        }
+
+    }
+}
+
+// card container
+.signup {
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.3rem 0 0 rgba(51, 51, 51, 0.3);
+
+    // Last Paragraph
+    p {
+        color: $clr-neutral-Grayish-Blue;
+        text-align: center;
+        padding: 0 2rem 2rem 2rem;
+        font-size: 10px;
+    }
+
+    a {
+        color: $clr-primary-red;
+        text-decoration: none;
+    }
+}
+
+// Form styles
+.form {
+    padding: 2rem 2rem 1rem 2rem;
+
+    .form-control {
+        margin-bottom: 1rem;
+        position: relative;
+    }
+
+    label {
+        display: none;
+        color: bisque;
+    }
+
+    input {
+        border: 1px solid $clr-neutral-Grayish-Blue;
+        border-radius: 0.3rem;
+        font-size: 0.8125rem;
+        font-weight: 500;
+        padding: 1rem 2rem;
+        width: 100%;
+        cursor: text;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    button {
+        width: 100%;
+        font-size: 0.875rem;
+        font-weight: 500;
+        padding: 0.8125rem 2rem;
+        border-radius: 0.3rem;
+        box-shadow: 0 0.2rem 0 0 hsl(154, 59%, 40%);
+        border: none;
+        color: inherit;
+        background-color: $clr-primary-green;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            background-color: hsl(154, 59%, 65%);
+        }
+
+        &:active {
+            background-color: hsl(154, 59%, 40%);
+        }
+    }
+}
+
+.form-control.error input {
+    margin-bottom: 0.2rem;
+    outline: none;
+    border: 2px solid $clr-primary-red;
+    background: no-repeat center right 20px/20px url(images/icon-error.svg);
+}
+
+small {
+    margin-top: 0.2rem;
+    display: block;
+    text-align: end;
+    font-size: small;
+    color: $clr-primary-red;
+}
+
+@media (max-width:65em) {
+    .container {
+        margin-inline: 5rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 38rem) {
+    .container {
+        text-align: center;
+        grid-auto-flow: row;
+        margin-inline: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+
+    .form {
+        padding: 1.5rem;
+    }
+
+    .form-container {
+        >p {
+            margin-top: 2rem;
+        }
+    }
+}

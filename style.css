@@ -1,0 +1,210 @@
+/* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  background: no-repeat center/contain url(images/bg-intro-desktop.png);
+  background-color: hsl(0deg, 100%, 74%);
+  color: #fff;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  align-items: center;
+  min-height: 100vh;
+  margin-inline: 10rem;
+  max-width: 90rem;
+}
+
+.intro {
+  margin-right: 2rem;
+}
+
+.form-container {
+  min-width: 20rem;
+}
+.form-container > p {
+  font-size: 0.875rem;
+  color: hsl(246deg, 25%, 90%);
+  background-color: hsl(248deg, 32%, 49%);
+  padding: 1rem 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.3rem 0 0 rgba(51, 51, 51, 0.3);
+}
+.form-container > p strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.signup {
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.3rem 0 0 rgba(51, 51, 51, 0.3);
+}
+.signup p {
+  color: hsl(246deg, 25%, 77%);
+  text-align: center;
+  padding: 0 2rem 2rem 2rem;
+  font-size: 10px;
+}
+.signup a {
+  color: hsl(0deg, 100%, 74%);
+  text-decoration: none;
+}
+
+.form {
+  padding: 2rem 2rem 1rem 2rem;
+}
+.form .form-control {
+  margin-bottom: 1rem;
+  position: relative;
+}
+.form label {
+  display: none;
+  color: bisque;
+}
+.form input {
+  border: 1px solid hsl(246deg, 25%, 77%);
+  border-radius: 0.3rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  width: 100%;
+  cursor: text;
+}
+.form input:focus {
+  outline: none;
+}
+.form button {
+  width: 100%;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.8125rem 2rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.2rem 0 0 hsl(154deg, 59%, 40%);
+  border: none;
+  color: inherit;
+  background-color: hsl(154deg, 59%, 51%);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.form button:hover, .form button:focus {
+  background-color: hsl(154deg, 59%, 65%);
+}
+.form button:active {
+  background-color: hsl(154deg, 59%, 40%);
+}
+
+.form-control.error input {
+  margin-bottom: 0.2rem;
+  outline: none;
+  border: 2px solid hsl(0deg, 100%, 74%);
+  background: no-repeat center right 20px/20px url(images/icon-error.svg);
+}
+
+small {
+  margin-top: 0.2rem;
+  display: block;
+  text-align: end;
+  font-size: small;
+  color: hsl(0deg, 100%, 74%);
+}
+
+@media (max-width: 65em) {
+  .container {
+    margin-inline: 5rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 38rem) {
+  .container {
+    text-align: center;
+    grid-auto-flow: row;
+    margin-inline: 1rem;
+  }
+  h1 {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+  .form {
+    padding: 1.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */
